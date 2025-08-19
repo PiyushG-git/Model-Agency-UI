@@ -418,3 +418,233 @@ html,body{
     height: 10%;
     width: 100%;
 }
+
+
+/* ========================================= */
+/* =========== Responsive Design =========== */
+/* ========================================= */
+@media (max-width: 600px) {
+
+    /* --- General Adjustments --- */
+    body {
+        /* Prevents horizontal scroll caused by large elements */
+        overflow-x: hidden;
+    }
+
+    /* --- Navigation Bar --- */
+    #nav {
+        height: auto; /* Allow nav to grow */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center items */
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+
+    #nav h1 {
+        width: 100%;
+        text-align: center;
+        letter-spacing: -2px;
+        font-size: 35px;
+        order: -1; /* Make the title appear first */
+        margin-bottom: 10px;
+    }
+    #nav h1::before{
+        font-size: 12px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 5%;
+    }
+
+    #nav h2 {
+        width: auto;
+        border-right: none;
+        font-size: 16px;
+        padding: 5px 15px; /* Add some padding for touch */
+    }
+
+    #nav h2:nth-last-child(2){
+        width: auto; /* Reset width */
+    }
+
+    /* --- Center Video Content --- */
+    #center {
+        height: 70vh; /* Adjust height for mobile */
+        padding: 5vw;
+    }
+
+    #overlay {
+        padding: 5vw;
+    }
+
+    #over1 {
+        margin-bottom: 3vh;
+    }
+
+    #over1 h1 {
+        font-size: 8vw; /* Larger, more readable font on mobile */
+    }
+
+    #over1 h2 {
+        font-size: 3vw;
+        padding: 3.5vw 3.8vw; /* Adjust padding */
+    }
+
+    #over2 h4 {
+        font-size: 4vw;
+    }
+
+    #over2 img {
+        height: 8vw;
+    }
+
+    /* --- Scrolling Image Gallery --- */
+    #scroll {
+        height: 25vh; /* Reduce height */
+    }
+
+    #container {
+        width: 180%; /* Adjust container width for animation */
+    }
+    
+    #scroll img {
+        height: 90%;
+        width: 28%; /* Show fewer images at a time */
+    }
+
+    /* --- Alphabet Filter --- */
+    #alphabet {
+        height: auto; /* Allow it to grow */
+        flex-wrap: wrap; /* Allow letters to wrap */
+        gap: 1.5vw;
+        padding: 10px 0;
+    }
+    
+    #alphabet h5 {
+        font-size: 4vw;
+        margin-right: 4vw;
+    }
+    
+    #alphabet h6 {
+        font-size: 3.5vw;
+        padding: 1.5vw 1.8vw;
+    }
+
+    /* --- Page 2 (Two Column Layout) --- */
+    #page2 {
+        flex-direction: column; /* Stack the columns vertically */
+        height: auto;
+        padding: 8vw 5vw;
+    }
+    
+    #page2-part1 {
+        width: 100%;
+        height: 60vh; /* Give it a fixed height */
+        margin-bottom: 5vh;
+    }
+    
+    #page2-part2 {
+        width: 100%;
+        height: auto;
+    }
+
+    #page2-content {
+        flex-direction: column; /* Stack text content */
+    }
+
+    #page2-content h3 {
+        font-size: 5vw;
+        margin-bottom: 2vh;
+    }
+    
+    #page2-content h5 {
+        font-size: 3.5vw;
+        padding: 0;
+    }
+
+    #vogue {
+        font-size: 6vw;
+        padding: 0 5vw 5vw 5vw;
+    }
+
+    /* --- Page 3 (Circular Text & Image) --- */
+    #page3 {
+        height: auto;
+        flex-direction: column; /* Stack columns */
+        padding: 5vw;
+    }
+    
+    #page3-part1 {
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+
+    #page3-part1 img {
+        width: 60%; /* Adjust size of rotating image */
+    }
+    
+    #page3-part1 p {
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 3vh;
+    }
+    
+    #page3-part2 {
+        width: 100%;
+        height: 60vh;
+    }
+
+    /* --- Page 4 (Updates Section) --- */
+    #page4 {
+        height: auto;
+        padding: 8vw 5vw;
+    }
+
+    #page4>h1 {
+        font-size: 8vw;
+        margin-bottom: 5vh;
+    }
+
+    .elem {
+        height: auto;
+        padding: 20px 0;
+        flex-wrap: wrap; /* Allow content to wrap */
+    }
+    
+    .elem h4 {
+        font-size: 3.5vw;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .elem img {
+        /* Make image always visible on mobile, as there is no hover */
+        opacity: 1;
+        position: relative;
+        left: 0;
+        height: 120px;
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .elem:hover img{
+        /* Disable the hover movement effect */
+        left: 0;
+    }
+
+    .elem-part2 {
+        width: 100%;
+    }
+    
+    .elem-part2 h1 {
+        font-size: 6vw;
+    }
+    
+    .elem-part2 h5 {
+        font-size: 2.8vw;
+    }
+
+    /* --- Marquee --- */
+    #marque h1 {
+        font-size: 7vw;
+    }
+}
