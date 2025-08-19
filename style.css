@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 html,body{
@@ -19,6 +20,7 @@ html,body{
 #nav{
     height: 11vh;
     width: 100%;
+    /* background-color: red; */
     margin-top: 40px;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
@@ -27,6 +29,7 @@ html,body{
     justify-content: space-between;
 }
 #nav h1{
+    /* background-color: blue; */
     height: 100%;
     width: 20%;
     display: flex;
@@ -38,6 +41,16 @@ html,body{
     letter-spacing: -5px;
     position: relative;
 }
+/* #nav h1::after{
+    content: "©️";
+    color: black;
+    font-family: gilroy;
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+} */
 #nav h1::before{
     content: "model management";
     color: #666;
@@ -50,6 +63,7 @@ html,body{
     right: 18%;
 }
 #nav h2{
+    /* background-color: blue; */
     height: 100%;
     width: 22%;
     display: flex;
@@ -61,6 +75,7 @@ html,body{
 }
 #nav h2:nth-last-child(1){
     width: 10%;
+    /* border-right: none; */
 }
 #nav h2:nth-last-child(2){
     width: 29%;
@@ -69,12 +84,14 @@ html,body{
     height: 90%;
     width: 100%;
     position: relative;
+    /* background-color: red; */
     padding: 4vw;
 }
 #content{
     height: 100%;
     width: 100%;
     position: relative;
+    /* background-color: blue; */
 }
 #content video{
     height: 100%;
@@ -86,8 +103,12 @@ html,body{
     width: 100%;
     position: absolute;
     bottom: 0;
+    /* background-color: red; */
     padding: 3vw;
     color: #fff;
+    /* background-color: rgba(0,0,0,0.154);
+    backdrop-filter: blur(5px); */ 
+    /* to blur the background */
 }
 #over1{
     display: flex;
@@ -102,6 +123,7 @@ html,body{
 #over1 h2{
     font-size: 1vw;
     padding: 2vw 2.2vw;
+    /* background-color: blue; */
     border-radius: 50%;
     border: 1px solid #fff;
     border-top: 7px solid #fff;
@@ -120,47 +142,49 @@ html,body{
 #over2 img{
     height: 3vw;
 }
-
-/* --- Corrected Scrolling Image Gallery --- */
-#scroll {
+#scroll{
     height: 40vh;
     width: 100%;
-    overflow: hidden;
-    display: flex; /* Use Flexbox to manage the containers */
+    /* background-color: red; */
+    /* padding: 1vw; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-
-.container {
+#container{
     height: 100%;
-    min-width: 100%; /* Each container is 100% of the parent's width */
+    width: 110%;
+    /* background-color: blue; */
+    display: inline-block;
     padding: 2vw;
-    animation: anime 20s linear infinite;
-    white-space: nowrap; /* Keep images in a single line inside the container */
+    animation: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-
-#scroll img {
-    height: 85%;
-    aspect-ratio: 1 / 1;
+#scroll img{
+    /* display: none; */
+    height: 95%;
     border-radius: 50%;
-    margin: 0 1.5vw;
+    width: 15%;
+    margin: 1vw;
     object-fit: cover;
-    object-position: top;
-    border: 3px solid #ffffff;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    /* object-position: top; */
+    object-position: 30% 30%;
 }
-
 @keyframes anime {
-    0% {
-        transform: translateX(0);
+    from{
+        transform: translate(0);
     }
-    100% {
-        /* Move the containers to the left by the width of ONE container */
-        transform: translateX(-100%);
+    to{
+        transform: translate(-100%);
     }
 }
 
 #alphabet{
     height: 11vh;
     width: 100%;
+    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,6 +207,7 @@ html,body{
     font-weight: 400;
     font-style: italic;
     letter-spacing: 4px;
+    /* background-color: yellow; */
     padding: 0.5vw 0.5vw;
     border-radius: 50%;
     cursor: pointer;
@@ -203,6 +228,7 @@ html,body{
 #page2-part1{
     height: 100%;
     width: 50%;
+    /* background-color: blue; */
     background-image: url(https://plus.unsplash.com/premium_photo-1727942419945-1908baae3c8e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww);
     background-size: cover;
     background-position: center;
@@ -220,6 +246,7 @@ html,body{
 #page2-content{
     padding: 0.7vw 0vw;
     display: flex;
+    /* align-items: center; */
     justify-content: space-between;
 }
 #page2-content h3{
@@ -243,6 +270,7 @@ html,body{
 #page3{
     height: 90%;
     width: 100%;
+    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -255,10 +283,14 @@ html,body{
     justify-content: space-around;
     height: 100%;
     width: 35%;
+    /* background-color: blue */
 }
 #page3-part1 img{
     width: 80%;
-    animation: rotating 10s linear infinite;
+    animation: rotating;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 } 
 #page3-part1 p{
     font-size: 1.5vw;
@@ -267,21 +299,23 @@ html,body{
 #page3-part2{
     height: 100%;
     width: 60%;
+    /* background-color: blue; */
     background-image: url(https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZWwnfGVufDB8fDB8fHww);
     background-size: cover;
     background-position: top;
 }
 @keyframes rotating {
     from{
-        transform: rotate(0deg);
+        rotate: 0;
     }
     to{
-        transform: rotate(360deg);
+        rotate: 360deg;
     }
 }
 #page4{
     height: 100%;
     width: 100%;
+    /* background-color: red; */
     position: relative;
     padding: 5vw 4vw;
 }
@@ -295,6 +329,7 @@ html,body{
 .elem{
     height: 15vh;
     width: 100%;
+    /* background-color: red; */
     border-top: 2px solid black;
     display: flex;
     align-items: center;
@@ -310,6 +345,7 @@ html,body{
     font-weight: 500;
     width: 6%;
     text-transform: uppercase;
+    /* background-color: red; */
 }
 .elem img{
     height: 100px;
@@ -339,10 +375,12 @@ html,body{
     left: 24%;
 }
 #marque{
+    /* height: 15vh; */
     width: 100%;
     padding: 0.5vw;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    /* background-color: red; */
     white-space: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -356,8 +394,12 @@ html,body{
     color: transparent;
     letter-spacing: 2px;
     font-family: momument;
+    /* background-color: blue; */
     margin-right: 16px;
-    animation: move 3s linear infinite;
+    animation: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 @keyframes move {
     from{
@@ -370,224 +412,9 @@ html,body{
 #marque :hover{
     animation-play-state: paused;
 }
+
+
 #footer{
     height: 10%;
     width: 100%;
-}
-
-/* ========================================= */
-/* =========== Responsive Design =========== */
-/* ========================================= */
-@media (max-width: 600px) {
-
-    /* --- General Adjustments --- */
-    body {
-        overflow-x: hidden;
-    }
-
-    /* --- Navigation Bar --- */
-    #nav {
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 0;
-        margin-top: 20px;
-    }
-
-    #nav h1 {
-        width: 100%;
-        text-align: center;
-        letter-spacing: -2px;
-        font-size: 35px;
-        order: -1;
-        margin-bottom: 10px;
-    }
-    #nav h1::before{
-        font-size: 11px;
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 5%;
-    }
-
-    #nav h2 {
-        width: auto;
-        border-right: none;
-        font-size: 16px;
-        padding: 5px 15px;
-    }
-
-    #nav h2:nth-last-child(2){
-        width: auto;
-    }
-
-    /* --- Center Video Content --- */
-    #center {
-        height: 70vh;
-        padding: 5vw;
-    }
-
-    #overlay {
-        padding: 5vw;
-    }
-
-    #over1 {
-        margin-bottom: 3vh;
-    }
-
-    #over1 h1 {
-        font-size: 8vw;
-    }
-
-    #over1 h2 {
-        font-size: 3vw;
-        padding: 3.5vw 3.8vw;
-    }
-
-    #over2 h4 {
-        font-size: 4vw;
-    }
-
-    #over2 img {
-        height: 8vw;
-    }
-
-    /* --- Hide Scrolling Image Gallery on Mobile --- */
-    #scroll {
-        display: none;
-    }
-
-    /* --- Alphabet Filter --- */
-    #alphabet {
-        height: auto;
-        flex-wrap: wrap;
-        gap: 1.5vw;
-        padding: 10px 0;
-    }
-    
-    #alphabet h5 {
-        font-size: 4vw;
-        margin-right: 4vw;
-    }
-    
-    #alphabet h6 {
-        font-size: 3.5vw;
-        padding: 1.5vw 1.8vw;
-    }
-
-    /* --- Page 2 (Two Column Layout) --- */
-    #page2 {
-        flex-direction: column;
-        height: auto;
-        padding: 8vw 5vw;
-    }
-    
-    #page2-part1 {
-        width: 100%;
-        height: 60vh;
-        margin-bottom: 5vh;
-    }
-    
-    #page2-part2 {
-        width: 100%;
-        height: auto;
-    }
-
-    #page2-content {
-        flex-direction: column;
-    }
-
-    #page2-content h3 {
-        font-size: 5vw;
-        margin-bottom: 2vh;
-    }
-    
-    #page2-content h5 {
-        font-size: 3.5vw;
-        padding: 0;
-    }
-
-    #vogue {
-        font-size: 6vw;
-        padding: 0 5vw 5vw 5vw;
-    }
-
-    /* --- Page 3 (Circular Text & Image) --- */
-    #page3 {
-        height: auto;
-        flex-direction: column;
-        padding: 5vw;
-    }
-    
-    #page3-part1 {
-        width: 100%;
-        margin-bottom: 5vh;
-    }
-
-    #page3-part1 img {
-        width: 60%;
-    }
-    
-    #page3-part1 p {
-        font-size: 4vw;
-        text-align: center;
-        margin-top: 3vh;
-    }
-    
-    #page3-part2 {
-        width: 100%;
-        height: 60vh;
-    }
-
-    /* --- Page 4 (Updates Section) --- */
-    #page4 {
-        height: auto;
-        padding: 8vw 5vw;
-    }
-
-    #page4>h1 {
-        font-size: 8vw;
-        margin-bottom: 5vh;
-    }
-
-    .elem {
-        height: auto;
-        padding: 20px 0;
-        flex-wrap: wrap;
-    }
-    
-    .elem h4 {
-        font-size: 3.5vw;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .elem img {
-        opacity: 1;
-        position: relative;
-        left: 0;
-        height: 120px;
-        width: 120px;
-        margin-bottom: 10px;
-    }
-
-    .elem:hover img{
-        left: 0;
-    }
-
-    .elem-part2 {
-        width: 100%;
-    }
-    
-    .elem-part2 h1 {
-        font-size: 6vw;
-    }
-    
-    .elem-part2 h5 {
-        font-size: 2.8vw;
-    }
-
-    /* --- Marquee --- */
-    #marque h1 {
-        font-size: 7vw;
-    }
 }
